@@ -3,71 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix Clone - Home</title>
-    <link rel="stylesheet" href="style.css">
+    <title>My Movie App</title>
+    <style>
+        /* CSS Starts Here */
+        body {
+            background-color: #111; /* Dark Netflix Theme */
+            color: white;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Top Navigation */
+        .navbar {
+            padding: 20px 50px;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.7) 10%, rgba(0,0,0,0));
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            color: #e50914;
+            font-size: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Movie Gallery Layout */
+        .container {
+            padding: 100px 50px 50px 50px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        /* Grid for many movie posters */
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+        }
+
+        .movie-card {
+            position: relative;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .movie-card img {
+            width: 100%;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+
+        /* Hover Effect */
+        .movie-card:hover {
+            transform: scale(1.1);
+            z-index: 10;
+        }
+
+        .movie-title {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
 </head>
 <body>
 
-    <header class="main-header">
-        <div class="logo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo">
-        </div>
-        <nav class="navigation">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">TV Shows</a></li>
-                <li><a href="#">Movies</a></li>
-                <li><a href="#">New & Popular</a></li>
-            </ul>
-        </nav>
-        <div class="user-profile">
-            <button class="search-btn">🔍</button>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt="Profile" class="avatar">
-        </div>
-    </header>
+    <div class="navbar">
+        <div class="logo">MOVIE-PLEX</div>
+    </div>
 
-    <section class="hero-banner">
-        <div class="hero-content">
-            <h1 class="hero-title">Stranger Things</h1>
-            <p class="hero-synopsis">
-                Jab ek chota ladka gayab ho jata hai, tab uske dost, pariwar, aur local police ek aisi mystery mein phans jaate hain jisme secret experiments aur supernatural forces shamil hain.
-            </p>
-            <div class="hero-btns">
-                <button class="play-btn">▶ Play</button>
-                <button class="info-btn">ⓘ More Info</button>
+    <div class="container">
+        <h2>Trending Now</h2>
+        
+        <div class="movie-grid">
+            <div class="movie-card">
+                <img src="https://via.placeholder.com/200x300?text=Movie+1" alt="Poster">
+                <div class="movie-title">Movie 1</div>
             </div>
-        </div>
-    </section>
-
-    <main class="content-rows">
-        <div class="row">
-            <h2 class="row-title">Trending Now</h2>
-            <div class="row-posters">
-                <img src="https://via.placeholder.com/200x300?text=Movie+1" class="poster" alt="Movie">
-                <img src="https://via.placeholder.com/200x300?text=Movie+2" class="poster" alt="Movie">
-                <img src="https://via.placeholder.com/200x300?text=Movie+3" class="poster" alt="Movie">
-                <img src="https://via.placeholder.com/200x300?text=Movie+4" class="poster" alt="Movie">
-                <img src="https://via.placeholder.com/200x300?text=Movie+5" class="poster" alt="Movie">
-                <img src="https://via.placeholder.com/200x300?text=Movie+6" class="poster" alt="Movie">
+            <div class="movie-card">
+                <img src="https://via.placeholder.com/200x300?text=Movie+2" alt="Poster">
+                <div class="movie-title">Movie 2</div>
             </div>
-        </div>
-
-        <div class="row">
-            <h2 class="row-title">Action Thrillers</h2>
-            <div class="row-posters">
-                <img src="https://via.placeholder.com/200x300?text=Action+1" class="poster" alt="Movie">
-                <img src="https://via.placeholder.com/200x300?text=Action+2" class="poster" alt="Movie">
-                <img src="https://via.placeholder.com/200x300?text=Action+3" class="poster" alt="Movie">
-                <img src="https://via.placeholder.com/200x300?text=Action+4" class="poster" alt="Movie">
-                <img src="https://via.placeholder.com/200x300?text=Action+5" class="poster" alt="Movie">
-                <img src="https://via.placeholder.com/200x300?text=Action+6" class="poster" alt="Movie">
+            <div class="movie-card">
+                <img src="https://via.placeholder.com/200x300?text=Movie+3" alt="Poster">
+                <div class="movie-title">Movie 3</div>
             </div>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <p>&copy; 2026 Netflix Clone Project</p>
-    </footer>
+            <div class="movie-card">
+                <img src="https://via.placeholder.com/200x300?text=Movie+4" alt="Poster">
+                <div class="movie-title">Movie 4</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://via.placeholder.com/200x300?text=Movie+5" alt="Poster">
+                <div class="movie-title">Movie 5</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://via.placeholder.com/200x300?text=Movie+6" alt="Poster">
+                <div class="movie-title">Movie 6</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://via.placeholder.com/200x300?text=Movie+7" alt="Poster">
+                <div class="movie-title">Movie 7</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://via.placeholder.com/200x300?text=Movie+8" alt="Poster">
+                <div class="movie-title">Movie 8</div>
+            </div>
+            </div>
+    </div>
 
 </body>
-</html>
+    </html>
+
