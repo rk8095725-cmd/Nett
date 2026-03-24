@@ -3,73 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Movie App</title>
+    <title>Movie-Plex | Trending</title>
     <style>
-        /* CSS Starts Here */
         body {
-            background-color: #111; /* Dark Netflix Theme */
+            background-color: #111;
             color: white;
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
-            overflow-x: hidden;
         }
 
-        /* Top Navigation */
         .navbar {
-            padding: 20px 50px;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.7) 10%, rgba(0,0,0,0));
+            padding: 15px 30px;
+            background: rgba(0,0,0,0.9);
             position: fixed;
             width: 100%;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
         }
 
         .logo {
             color: #e50914;
-            font-size: 30px;
+            font-size: 24px;
             font-weight: bold;
-            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        /* Movie Gallery Layout */
         .container {
-            padding: 100px 50px 50px 50px;
+            padding: 80px 20px 20px 20px;
         }
 
         h2 {
-            margin-bottom: 20px;
+            margin-left: 10px;
+            font-size: 20px;
         }
 
-        /* Grid for many movie posters */
+        /* Movie Grid Layout */
         .movie-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
             gap: 15px;
+            padding: 10px;
         }
 
         .movie-card {
-            position: relative;
             transition: transform 0.3s ease;
             cursor: pointer;
         }
 
         .movie-card img {
             width: 100%;
-            border-radius: 5px;
-            object-fit: cover;
+            height: 230px;
+            border-radius: 8px;
+            object-fit: cover; /* Poster ko sahi shape mein rakhta hai */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
         }
 
-        /* Hover Effect */
         .movie-card:hover {
             transform: scale(1.1);
-            z-index: 10;
         }
 
         .movie-title {
             text-align: center;
-            font-size: 14px;
-            margin-top: 5px;
+            font-size: 13px;
+            margin-top: 8px;
+            color: #ccc;
         }
     </style>
 </head>
@@ -80,44 +78,43 @@
     </div>
 
     <div class="container">
-        <h2>Trending Now</h2>
+        <h2>Trending Movies & Shows</h2>
         
         <div class="movie-grid">
             <div class="movie-card">
-                <img src="https://via.placeholder.com/200x300?text=Movie+1" alt="Poster">
-                <div class="movie-title">Movie 1</div>
+                <img src="https://image.tmdb.org/t/p/w500/8Gxv2mYqlLzwqL7fkMv2p2YIttX.jpg" alt="Movie">
+                <div class="movie-title">Dhurandhar</div>
             </div>
             <div class="movie-card">
-                <img src="https://via.placeholder.com/200x300?text=Movie+2" alt="Poster">
-                <div class="movie-title">Movie 2</div>
+                <img src="https://image.tmdb.org/t/p/w500/49WfT189EuGbZ0R67vQub9S1Y1p.jpg" alt="Movie">
+                <div class="movie-title">Stranger Things</div>
             </div>
             <div class="movie-card">
-                <img src="https://via.placeholder.com/200x300?text=Movie+3" alt="Poster">
-                <div class="movie-title">Movie 3</div>
+                <img src="https://image.tmdb.org/t/p/w500/reEMJA1uzpG3SZ0KGbnndreBff5.jpg" alt="Movie">
+                <div class="movie-title">Money Heist</div>
             </div>
             <div class="movie-card">
-                <img src="https://via.placeholder.com/200x300?text=Movie+4" alt="Poster">
-                <div class="movie-title">Movie 4</div>
+                <img src="https://image.tmdb.org/t/p/w500/7WsyChvnavvjxAR1hgRzuvj2sH4.jpg" alt="Movie">
+                <div class="movie-title">The Batman</div>
             </div>
             <div class="movie-card">
-                <img src="https://via.placeholder.com/200x300?text=Movie+5" alt="Poster">
-                <div class="movie-title">Movie 5</div>
+                <img src="https://image.tmdb.org/t/p/w500/xXp9uYpZ0JpAg996Y96Oex9Y89v.jpg" alt="Movie">
+                <div class="movie-title">Wednesday</div>
             </div>
             <div class="movie-card">
-                <img src="https://via.placeholder.com/200x300?text=Movie+6" alt="Poster">
-                <div class="movie-title">Movie 6</div>
+                <img src="https://image.tmdb.org/t/p/w500/v9p9pXjO86rV5G6l8v4j9O8v8v8.jpg" alt="Movie">
+                <div class="movie-title">Pushpa 2</div>
             </div>
             <div class="movie-card">
-                <img src="https://via.placeholder.com/200x300?text=Movie+7" alt="Poster">
-                <div class="movie-title">Movie 7</div>
+                <img src="https://image.tmdb.org/t/p/w500/fTux9id99Ip69M99S9999.jpg" alt="Movie" onerror="this.src='https://via.placeholder.com/200x300?text=Animal'">
+                <div class="movie-title">Animal</div>
             </div>
             <div class="movie-card">
-                <img src="https://via.placeholder.com/200x300?text=Movie+8" alt="Poster">
-                <div class="movie-title">Movie 8</div>
+                <img src="https://image.tmdb.org/t/p/w500/39p9pXjO86rV5G6l8v4j9O8v8v8.jpg" alt="Movie" onerror="this.src='https://via.placeholder.com/200x300?text=Pathaan'">
+                <div class="movie-title">Pathaan</div>
             </div>
-            </div>
+        </div>
     </div>
 
 </body>
-    </html>
-
+</html>
